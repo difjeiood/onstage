@@ -1,0 +1,38 @@
+.logo{
+    float: left;
+    height: 60px;
+    width: 33%;
+    line-height:60px;
+}
+.clear{
+    clear: both;
+}
+.navigation{
+    background: black;
+    height:50px;
+    line-height: 50px;
+    width: 99%;
+}
+.amenu{
+    color: white;
+    text-decoration: none;
+}
+/* 注册部分 */
+.regb{
+    background:url(../../../img/regist_bg.jpg);
+    height: 500px;
+    width: 99%;
+    /* border: 1px solid red; */
+}
+.reg{
+    background:white;
+    height: 350px;
+    width: 45%;
+    border: 5px solid gray;
+    position: absolute;
+    left: 300px;
+    top: 200px;
+}
+.footer{
+    text-align: center;
+}

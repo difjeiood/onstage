@@ -1,0 +1,57 @@
+/* logo部分 */
+.logo{
+    float:left;
+    width:33%;
+    height:60px;
+    line-height:60px;
+    /* border: 1px solid red; */
+}
+/* 清除浮动 */
+.clear{
+    clear: both;
+}
+/* 导航栏部分 */
+.navigation{
+    background-color: black;
+    height: 50px;
+}
+/* 导航栏部分字体 */
+.amenu{
+    color: white;
+    text-decoration: none ; /*去除下划线*/
+    height: 50px;
+    line-height: 50px;
+}
+/* 左侧广告部分 */
+.leftad{
+    width: 20%;
+    height: 480px;
+    /* border: 1px solid red; */
+    float:left;
+}
+/*左侧侧广告部分 */
+.rightad{
+    width: 79%;
+    height: 480px;
+    /* border: 1px solid red; */
+    float:left;
+}
+.middle{
+    height: 240px;
+    width: 50%;
+    float: left;
+    /* border: 1px solid red */
+}
+/* 商品部分 */
+.product{
+    text-align: center;
+    width: 16%;
+    height: 240px;
+    /* border: 1px solid red; */
+    float : left;
+}
+/* 底下部分 */
+.footer{
+    text-align: center;
+    
+}
