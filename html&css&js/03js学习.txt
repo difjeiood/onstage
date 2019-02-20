@@ -1,0 +1,67 @@
+JavaScript概述
+    直译式的脚本语言
+
+什么是脚本语言?
+    脚本语言:源码---->解释执行
+    js是有浏览器来解释执行
+
+HTML:决定页面框架
+CSS: 用来美化页面
+js : 提供用户交互
+
+JS的组成
+    ECMAScript:核心部分,定义js的语法规范
+    DOM:document Object Model文档对象模型,主要用来管理也米娜
+    BOM:Browser Object Model 浏览器对象模型,前进,后退,页面刷新,地址栏,历史纪录,屏幕宽高
+
+
+js语法:
+    变量弱类型: var i = 字符串,数字,布尔值等
+    区分大小写
+    语句结束之后的分号,可有可无.
+    写在script标签中
+
+js的数据类型
+    基本类型
+        string
+        number
+        boolean
+        undefine
+        null
+    引用类型
+        对象,内置对象
+    类型转换
+        js内部自动转换
+
+js的运算符和语句
+    运算符与java一样
+    "==="全等号:值和类型都必须相等
+    语句和java一样
+
+js的输出
+    alert()直接弹窗
+    document.write()向页面输出
+    console.log()向控制台输出
+    innerHTML:向页面输出
+    document.getElementById("d的名称");获取页面元素
+
+js声明变量
+    var 变量名 = 变量的值
+
+js声明函数(两种)
+    var = 函数的名称 = function(){
+
+    }
+    function 函数的名称() {
+
+    }
+
+js开发步骤
+    1.确定事件
+    2.通常事件都会触发一个函数
+    3.函数里面通常都会去操作页面元素,做一些交互动作
+
+
+
+
+

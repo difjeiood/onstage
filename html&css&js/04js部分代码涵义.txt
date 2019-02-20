@@ -1,0 +1,8 @@
+var  变量名                                     定义变量
+alert(打印的东西)                               浏览器弹窗
+typeof 变量                                     打印变量类型
+/正则表达式/.test(参数)                          正则表达式校验
+setInterval("函数代码或函数名称", 毫秒值)         （定时器）指定毫秒数循环执行代码
+setTimeout("函数代码或函数名称", 毫秒值)          （定时器）指定毫秒数后执行代码
+clearInterval(定时器id)                         取消定时器，id由调用setInterval函数返回
+clearTimeout(定时器id)                          取消定时器，id由调用setTimeout函数返回
