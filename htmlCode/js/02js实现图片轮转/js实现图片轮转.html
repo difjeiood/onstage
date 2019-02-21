@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var index = 0;
+        function changeImg(){
+            var img1 = document.getElementById("img1");
+            var curIndex = (index%3)+1;
+            img1.src="../../img/"+curIndex+".jpg";
+            index = index + 1;
+        }
+
+        function init() {
+            setInterval("changeImg()",2000);
+        }
+    </script>
+</head>
+<body onload="init()">
+    <img src="../../img/1.jpg"  id="img1"/>
+</body>
+</html>

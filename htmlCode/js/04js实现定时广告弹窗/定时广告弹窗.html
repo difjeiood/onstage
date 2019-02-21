@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>广告弹窗</title>
+    <script>
+
+    function init() {
+    // var img = document.getElementById("img1");
+    //显示广告
+    setTimeout("showAD()",3000);
+    }
+    //显示广告函数
+    function showAD() {
+        var img = document.getElementById("img1");
+        img.style.display = "block";
+        
+        //关闭广告
+        setTimeout("hideAD()",3000);
+    }
+    //隐藏广告函数
+    function hideAD() {
+        var img = document.getElementById("img1");
+        img.style.display = "none";
+    }
+    </script>
+</head>
+<body onload="init()">
+    <img id="img1" src="../../img/small06.jpg" style="display : none"/>
+</body>
+</html>

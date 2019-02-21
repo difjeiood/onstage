@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js表单校验</title>
+    <script type="text/javascript" src="../js/regular.js"></script>
+</head>
+<body>
+    <form action="../02js实现图片轮转/js实现图片轮转.html" onsubmit="return checkForm()">
+        用户名：<input type="text" id="username" onfocus="showTips('span_username','用户名不能小于6位')" onblur="checkUsername()"/><span id="span_username"></span> <br/>
+        密  码：<input type="password" id="password" onfocus="showTips('span_password','密码不能小于6位')" onblur="checkPassword()"/> <span id="span_password"></span><br/> 
+        确认密码：<input type="password" id="re_password" onfocus="showTips('span_re_password','两次输入的密码必须一致')" onblur="checkRePassword()"/><span id="span_re_password"></span><br/>
+
+        <input type="submit" value="提交"/>
+    </form>
+</body>
+</html>
