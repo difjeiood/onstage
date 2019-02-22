@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>省市联动</title>
+    <script>
+        /*准备数据*/
+        var provinces = [
+				["长沙市","岳阳市","株洲市","湘潭市"],
+				["深圳市","东莞市","惠州市","广州市"],
+            ];
+
+        /*
+            1.确定事件： onchange()
+            2.函数：selectProvince()
+            3.操作元素
+        */
+
+        function selectProvince() {
+            //获取选择的省份
+            var value = document.getElementById("select1").value;
+            //根据value值取出数组中的城市
+            var citys = provinces[value];
+            //获取城市元素
+            var selectCity = document.getElementById("selectCity");
+            
+            //每选择一次就清空一次城市列表
+            selectCity.options.length = 0;
+
+            //循环城市列表
+            for (var i = 0; i < citys.length; i++) {
+                //获取每一个城市
+                var city = citys[i];
+                //创建option元素节点
+                var option1 = document.createElement("option");
+                //创建文件节点
+                var textNode = document.createTextNode(city);
+                //使option节点和文本节点关联
+                option1.appendChild(textNode);
+                //与城市select相关两
+                selectCity.appendChild(option1);
+
+            }
+        }
+            
+
+    </script>
+</head>
+<body>
+    <select id = "select1" onchange="selectProvince()">
+        <option value = "-1">请选择</option>
+        <option value = "0">湖南省</option>
+        <option value = "1">广东省</option>
+    </select>
+    <select id = "selectCity"></select>
+</body>
+</html>

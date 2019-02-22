@@ -72,3 +72,45 @@ js显示与隐藏
 引入一个外部js文件
     <script src="js的文件路径" type=”text/javascript“> </script>
 
+
+什么是DOM: Document Object Model : 管理我们的文档   增删改查规则 
+
+
+
+
+【HTML中的DOM操作】
+
+```html
+一些常用的 HTML DOM 方法：
+  getElementById(id) - 获取带有指定 id 的节点（元素） 
+  appendChild(node) - 插入新的子节点（元素） 
+  removeChild(node) - 删除子节点（元素） 
+
+  一些常用的 HTML DOM 属性：
+  innerHTML - 节点（元素）的文本值 
+  parentNode - 节点（元素）的父节点 
+  childNodes - 节点（元素）的子节点 
+  attributes - 节点（元素）的属性节点 
+
+
+查找节点：
+getElementById() 返回带有指定 ID 的元素。 
+getElementsByTagName() 返回包含带有指定标签名称的所有元素的节点列表（集合/节点数组）。 
+getElementsByClassName() 返回包含带有指定类名的所有元素的节点列表。 
+
+增加节点：
+createAttribute() 创建属性节点。 
+createElement() 创建元素节点。 
+createTextNode() 创建文本节点。 
+insertBefore() 在指定的子节点前面插入新的子节点。 
+appendChild() 把新的子节点添加到指定节点。 
+
+删除节点：
+removeChild() 删除子节点。 
+replaceChild() 替换子节点。 
+
+修改节点：
+setAttribute()  修改属性
+setAttributeNode()  修改属性节点
+```
+
