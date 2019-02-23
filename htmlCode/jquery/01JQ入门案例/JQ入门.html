@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jq入门</title>
+    <!-- 点击修改div内容 -->
+    <!-- 导入jquery -->
+    <script type="text/javascript" src="../js/jquery-1.11.0.js"></script>
+    <script>
+        //js方式
+        function change() {
+            //获取div
+            var div1 = document.getElementById("div1");
+            //修改文本内容
+            // div1.innerHTML = "js修改内容";
+            
+            //js对象转换成jq对象
+            $(div1).html("js对象转换成jq修改内容");
+
+        }
+        //jq方式
+        $(function() { 
+            //给按钮绑定事件
+            $("#btn2").click(function() {
+                //找到div
+                // $("#div1").html("jq修改内容");
+
+                //jq转换成js对象
+                var $div = $("#div1");  //jq对象
+                
+                // var jsDiv = $div.get(0);
+                var jsDiv = $div[0];
+                jsDiv.innerHTML= "jq转换为js修改内容";
+            });
+        });
+    
+    </script>
+</head>
+<body>
+    <!-- js修改div内容 -->
+    <input type="button" value="js方式修改div内容" id = "btn1" onclick="change()"/>
+    <input type="button" value="jq方式修改div内容" id = "btn2"/>
+    <div id= "div1">
+        js/jq修改内容
+    </div>
+    
+</body>
+</html>
