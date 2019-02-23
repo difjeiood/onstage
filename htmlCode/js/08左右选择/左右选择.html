@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>左右选择</title>
+    <script>
+    //把左边元素移动到右边
+    function selectOne() {
+        //找到select的id
+        var leftSelect = document.getElementById("leftSelect");
+        //找到被选择的option
+        var options = leftSelect.options;
+
+        //找到右侧的select
+        var rightSelect = document.getElementById("rightSelect");
+        //遍历找出被选中的option
+        for (var i = 0; i < options.length; i++) {
+            var optionOne = options[i];
+            //判断是否被选中
+            if (optionOne.selected) {
+                //添加到右边
+                rightSelect.appendChild(optionOne);
+            }
+        }
+    }
+
+    //把左边所有元素移到右边
+    function selectAll() {
+        //找到select的id
+        var leftSelect = document.getElementById("leftSelect");
+        //找到被选择的option
+        var options = leftSelect.options;
+
+        //找到右侧的select
+        var rightSelect = document.getElementById("rightSelect");
+        //遍历找出被选中的option
+        /*
+        会出现bug，应该从后往前遍历
+        */
+        for (var i = options.length -1; i >= 0; i--) {
+            var optionOne = options[i];
+                //添加到右边
+                rightSelect.appendChild(optionOne);
+        }
+    }
+    </script>
+</head>
+<body>
+    <table border = "1px" width = "400px">
+        <tr>
+            <td>分类名称</td>
+            <td>手机数码</td>
+        </tr>
+        <tr>
+            <td>分类描述</td>
+            <td>手机数码</td>
+        </tr>
+        <tr>
+            <td>分类商品</td>
+            <td>
+                <!-- 左边 -->
+                <div style = "float: left;">
+                    已有商品<br/>
+                    <select multiple = "multiple" id = "leftSelect" ondblclick="selectOne()">
+                        <option>华为</option>
+                        <option>小米</option>
+                        <option>锤子</option>
+                        <option>oppo</option>
+                    </select>
+                    <br/>
+                    <a href = "#" onclick = "selectOne()">&gt;&gt;</a><br/>
+                    <a href = "#" onclick = "selectAll()">&gt;&gt;&gt;</a>
+                </div>
+                <!-- 右边 -->
+                <div style = "float:right;">
+                        未有商品<br/>
+                    <select multiple = "multiple" id = "rightSelect">
+                    </select><br/>
+                        <a href = "#">&lt;&lt;</a><br/>
+                        <a href = "#"> &lt;&lt;&lt;</a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan = "2">
+                <input type="submit" value="提交"/>
+            </td>
+        </tr>
+    </table>
+    
+</body>
+</html>
