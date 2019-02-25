@@ -115,6 +115,11 @@ CSS中的其它选择器
             fixed生成绝对定位的元素，相对于浏览器窗口进行定位。元素的位置通过 "left", "top", "right" 以及 "bottom" 属性进行规定。
             relative生成相对定位的元素，相对于其正常位置进行定位。因此，"left:20" 会向元素的 LEFT 位置添加 20 像素。
 
+    css3
+          属性                    作用
+        opacity                 透明度
+        visibility              可见性
+
 
 
 

@@ -1,0 +1,125 @@
+jQuery慕课网学习笔记
+
+jQuery特点
+    容易上手
+    强大的选择器
+    解决浏览器的兼容
+    完善的事件机制
+    出色的Ajax封装
+    丰富的 UI
+
+jQuery样式篇
+    $(document).ready 的作用是等页面的文档（document）中的节点都加载完毕后，
+    再执行后续的代码，因为我们在执行代码的时候，可能会依赖页面的某一个元素，
+    我们要确保这个元素真正的的被加载完毕后才能正确的使用。
+
+    <!-- 使用jQuery语法 -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            /**
+             * 通过jQuery语法获取id为imooc2的元素获得一个jQuery对象
+             * 调用该对象的html()方法进行更改内容
+             * 调用该对象的css()方法进行更改颜色样式
+             */   
+            var $p = $('#imooc2');  //获取id为imooc2的元素获得一个jQuery对象
+            $p.html('P2：您好！通过慕课网学习jQuery才是最佳的途径').css('color','red');
+        });
+    </script>
+
+    DOM对象转jQuery对象
+        var div = document.getElementsByTagName('div'); //dom对象
+        var $div = $(div); //jQuery对象
+        var $first = $div.first(); //找到第一个div元素
+        $first.css('color', 'red'); //给第一个元素设置颜色
+
+    jQuery选择器之id选择器
+        页面的任何操作都需要节点的支撑，开发者如何快速高效的找到指定的节点也是前端开发中的一个重点。
+        jQuery提供了一系列的选择器帮助开发者达到这一目的，
+        让开发者可以更少的处理复杂选择过程与性能优化，更多专注业务逻辑的编写。
+        jQuery几乎支持主流的css1~css3选择器的写法，
+
+        id选择器：一个用来查找的ID，即元素的id属性
+        $( "#id" )
+        id选择器也是基本的选择器，jQuery内部使用JavaScript函数document.getElementById()来处理ID的获取。
+        原生语法的支持总是非常高效的，所以在操作DOM的获取上，如果能采用id的话尽然考虑用这个选择器
+        值得注意：
+        id是唯一的，每个id值在一个页面中只能使用一次。
+        如果多个元素分配了相同的id，将只匹配该id选择集合的第一个DOM元素。
+        但这种行为不应该发生;有超过一个元素的页面使用相同的id是无效的
+
+    jQuery选择器之类选择器
+        类选择器，顾名思义，通过class样式类名来获取节点
+        描述：
+        $( ".class" )
+        类选择器，相对id选择器来说，效率相对会低一点，但是优势就是可以多选
+        同样的jQuery在实现上，对于类选择器，如果浏览器支持，jQuery使用JavaScript的原生getElementsByClassName()函数来实现的
+        jQuery除了选择上的简单，而且没有再次使用循环处理
+        不难想到$(".imooc").css()方法内部肯定是带了一个隐式的循环处理，
+        所以使用jQuery选择节点，不仅仅只是选择上的简单，同时还增加很多关联的便利操作，
+
+        示例
+            <script type="text/javascript">
+                //通过原生方法处理
+                //样式是可以多选的，所以得到的是一个合集
+                //需要通过循环给合集中每一个元素修改样式
+                var divs = document.getElementsByClassName('aaron');
+                for (var i = 0; i < divs.length; i++) {
+                    divs[i].style.border = "3px solid blue";
+                }
+            </script>
+
+            <script type="text/javascript">
+                //通过jQuery直接传入class
+                //class选择器可以选择多个元素
+                $(".imooc").css("border", "3px solid red");
+            </script>
+
+    jQuery选择器之元素选择器
+        元素选择器：根据给定（html）标记名称选择所有的元素
+        描述：
+        $( "element" )
+        搜索指定元素标签名的所有节点，这个是一个合集的操作。同样的也有原生方法getElementsByTagName()函数支持
+
+    示例
+        <script type="text/javascript">
+            //通过原生方法处理
+            //获取到所有的节点标记名为div的元素
+            //给每一个div加上蓝色的边框
+            var divs = document.getElementsByTagName('div');
+            for (var i = 0; i < divs.length; i++) {
+                divs[i].style.border = "3px solid blue";
+            }
+        </script>
+        <script type="text/javascript">
+            //通过jQuery直接传入标签名p
+            //标签是可以多个的，所以得到的同样也是一个合集
+            $("p").css("border", "3px solid red");
+        </script>
+
+    jQuery选择器之全选择器（*选择器）
+        在CSS中，经常会在第一行写下这样一段样式
+        * {padding: 0; margin: 0;}
+        通配符*意味着给所有的元素设置默认的边距。jQuery中我们也可以通过传递*选择器来选中文档页面中的元素
+        描述：
+        $( "*" )
+        抛开jQuery，如果要获取文档中所有的元素，通过document.getElementsByTagName()中传递"*"同样可以获取到
+        不难发现，id、class、tag都可以通过原生的方法获取到对应的节点，
+        但是我们还需要考虑一个兼容性的问题，我这里顺便提及一下，比如:
+        IE会将注释节点实现为元素，所以在IE中调用getElementsByTagName里面会包含注释节点，这个通常是不应该的
+        getElementById的参数在IE8及较低的版本不区分大小写
+        IE7及较低的版本中，表单元素中，
+        如果表单A的name属性名用了另一个元素B的ID名并且A在B之前，那么getElementById会选中A
+        IE8及较低的版本，浏览器不支持getElementsByClassName
+
+    jQuery层级选择器
+    示例
+        <script type="text/javascript">
+            //相邻兄弟选择器
+            //选取prev后面的第一个的div兄弟节点
+            $('.prev +').css("border", "3px groove blue");
+        </script>
+        <script type="text/javascript">
+            //一般相邻选择器
+            //选取prev后面的所有的div兄弟节点
+            $('.prev ~').css("border", "3px groove blue");
+        </script>
