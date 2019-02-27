@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM创建节点及节点属性</title>
+    <style>
+    .left,
+    .right {
+        width: 300px;
+        height: 120px;
+    }
+
+    .left div,
+    .right div {
+        width: 100px;
+        height: 90px;
+        padding: 5px;
+        margin: 5px;
+        float: left;
+        border: 1px solid red;
+    }
+
+    .left div {
+        background: blue;
+    }
+
+    .right div {
+        background: yellow;
+    }
+
+    </style>
+</head>
+<body>
+    <h2>动态创建元素节点</h2>
+    <div class="left">
+        <div class="liguang">
+            点击body区域动态创建节点
+        </div>
+    </div>
+    <script type="text/javascript">
+            var body = document.querySelector('body');
+            document.addEventListener('click',function(){
+                //创建div
+                var rightdiv = document.createElement('div');
+                var rightliguang = document.createElement('div');
+                //设置属性
+                rightdiv.setAttribute('class', 'right');
+                rightliguang.className = 'liguang';
+                rightliguang.innerHTML = "动态创建节点元素";
+                //关联
+                rightdiv.appendChild(rightliguang);
+                //绘制到页面body
+                body.appendChild(rightdiv);
+            },false);
+    </script>
+</body>
+</html>

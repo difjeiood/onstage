@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM内部插入prepend()与prependTo()</title>
+    <script type="text/javascript" src="../js/jquery-1.11.0.js"></script>
+    <style>
+        .liguang1{
+            border: 1px solid red;
+        }
+        .liguang1 p {
+            color: red;
+        }
+        .liguang2{
+            border: 1px solid blue;
+        }
+        .liguang2 p {
+            color: blue;
+        }
+    </style> 
+</head>
+<body>
+    <h2>通过prepend与prependTo添加元素</h2>
+    <button id="bt1">
+        通过jquery的prepend添加元素
+    </button>
+    <button id="bt2">
+        通过jquery的prependTo添加元素
+    </button>
+    <div class="liguang1">
+        <p>测试prepend</p>
+    </div>
+    <div class="liguang2" >
+        <p>测试prependTo</p>
+    </div>
+    <script>
+    $('#bt1').on('click', function(){
+        $('.liguang1').prepend('<p>通过prepend添加元素</p>');
+    });
+
+    $("#bt2").on('click', function() {
+        $('<p>prependTo添加的元素</p>').prependTo($('.liguang2'))
+    })
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery节点创建与属性的处理</title>
+    <script type="text/javascript" src="../js/jquery-1.11.0.js"></script>
+    <style>
+    .left,
+    .right {
+        width: 300px;
+        height: 120px;
+    }
+
+    .left div,
+    .right div {
+        width: 100px;
+        height: 90px;
+        padding: 5px;
+        margin: 5px;
+        float: left;
+        border: 1px solid #ccc;
+    }
+
+    .left div {
+        background: #bbffaa;
+    }
+
+    .right div {
+        background: yellow;
+    }
+    </style>
+</head>
+<body>
+    <h2>动态创建元素节点</h2>
+    <button>点击通过jQuery动态创建元素节点</button>
+    <script type="text/javascript" >
+        var $body = $('body');
+        $body.on('click', function(){
+            //通过jQuery生成div元素节点
+            var div = $("<div class='right'><div>动态创建DIV元素节点</div></div>");
+            $body.append(div);
+        });
+    
+    </script>
+</body>
+</html>
