@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表单选择器</title>
+</head>
+<script type="text/javascript" src="../js/jquery-1.11.0.js"></script>
+<script>
+    $(function(){
+        //简单举个例子
+        $(":text").css("background-color","red");
+        $("#btn1").click(function() {
+            alert($("option:selected").size());
+        });
+    });
+</script>
+<body>
+        <form>
+            <input type="button" value="Input Button"/><br/>
+            <input type="checkbox" /><br/>
+        
+            <input type="file" /><br/>
+            <input type="hidden" /><br/>
+            <input type="image" /><br/>
+        
+            <input type="password" /><br/>
+            <input type="radio" /><br/>
+            <input type="reset" /><br/>
+        
+            <input type="submit" /><br/>
+            <input type="text" /><br/>
+            <select multiple="multiple">
+                <option>Option</option>
+                <option>111</option>
+                <option>2222</option>
+            </select><br/>
+            <input type="button" value="点击" id="btn1"/>
+        
+            <textarea></textarea><br/>
+            <button>Button</button><br/>
+        </form>
+</body>
+</html>

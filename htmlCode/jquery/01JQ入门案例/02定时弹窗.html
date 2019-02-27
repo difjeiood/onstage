@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>定时弹窗</title>
+    <!-- 导入jquery -->
+    <script type="text/javascript" src="../js/jquery-1.11.0.js"></script>
+    <script>
+        //显示广告
+        function showAd() {
+            $("#img1").show();
+
+            setTimeout("hideAd()", 3000);
+        }
+        //隐藏广告
+        function hideAd() {
+            $("#img1").hide();
+        }
+
+        $(function(){
+            setTimeout("showAd()", 3000);
+        });
+    </script>
+</head>
+<body>
+    <img src="../../img/1.jpg" width="500px" height="400px" id="img1" style="display:none"/>
+</body>
+</html>
