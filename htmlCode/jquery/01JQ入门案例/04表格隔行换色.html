@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表格隔行换色</title>
+    <script type="text/javascript" src="../js/jquery-1.11.0.js"></script>
+    <script>
+        $(function(){
+            $("table tr:even").css("background-color","red");
+            $("table tr:odd").css("background-color","yellow");
+        });
+    </script>
+</head>
+<body>
+    <!-- 一个表格 (5行3列）-->
+    <table border="1px solid" id="table1" width="500px" height="500px">
+        <tr>
+            <td>1</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    
+</body>
+</html>

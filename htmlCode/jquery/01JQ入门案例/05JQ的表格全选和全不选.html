@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表格的全选和全不选</title>
+    <script type="text/javascript" src="../js/jquery-1.11.0.js"></script>
+   <script>
+       //实现全选和全不选
+       $(function() {
+            //一行代码就可以解决
+            $("#checkAll").click(function() {
+                // $("input[type='checkbox']:gt(0)").prop("checked",this.checked);
+                //层级选择器实现
+                $("td > input").prop("checked",this.checked);
+            });
+       });
+   </script>
+</head>
+<body>
+<table width="600px" border="1px" align="center" id="tab">
+        <tr>
+            <td>
+                <input type="checkbox"   id="checkAll"/>
+            </td>
+            <td>
+                全选
+            </td>
+        </tr>
+		<tr>
+            <td>
+                <input type="checkbox" />
+            </td>
+            <td>
+                测试测试
+            </td>
+        </tr>
+		<tr>
+            <td>
+                <input type="checkbox"/>
+            </td>
+            <td>
+                测试测试
+            </td>
+        </tr>
+		<tr>
+            <td>
+                <input type="checkbox"/>
+            </td>
+            <td>
+                测试测试
+            </td>
+        </tr>
+		<tr>
+            <td>
+                <input type="checkbox"/>
+            </td>
+            <td>
+                测试测试
+            </td>
+        </tr>
+		<tr>
+            <td>
+                <input type="checkbox"/>
+            </td>
+            <td>
+                测试测试
+            </td>
+        </tr>
+    </table>
+    
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JQ遍历</title>
+    <script type="text/javascript" src="../js/jquery-1.11.0.js"></script>
+    <script>
+        var students = ['zhangsan','lisi','wangwu'];
+        // $(students).each(function(i,n){
+        //     console.log(i + "----" + n);
+        // });
+        // //JQ函数调用
+        // $.each(students,function(i,n) {
+        //     console.log(i + ">>>" + n);
+        // });
+
+        function callback(i,n) {
+            console.log(i + "----" + n);
+        }
+        //向用户传递信息
+        function test(arr,callback) {
+            for (var i = 0; i < arr.length; i++) {
+                var item = arr[i];
+                callback(i, item);
+            }
+        }
+        test(students,callback);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
