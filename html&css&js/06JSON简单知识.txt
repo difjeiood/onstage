@@ -1,0 +1,5 @@
+JSON对象
+    { key1:value }
+
+JSON数组
+    [{ key1:value }, { key1:value }, { key1:value }...]
