@@ -1,0 +1,96 @@
+/*基本样式*/
+a{
+    text-decoration: none;/* 去掉下划线 */
+}
+
+
+/* 登录页面 */
+.logo {
+    font-size: 30px;
+    /* color: #777; */
+    color:white;
+    margin-left: 20px;
+}
+.landContent{
+    margin-top: 80px;
+    text-align: center;
+}
+.landTitle{
+    font-size: 40px;
+    font-weight: 500;
+}
+.landTitle{
+    font-size: 40px;
+    font-weight: 500;
+}
+.formItem label{
+    width: 80px;
+    display: inline-block;
+}
+.formItem{
+    margin: 30px 0;
+    padding-right: 60px;
+}
+.formItem input,.formItem select{
+    width: 400px;
+    height: 35px;
+    text-indent: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+}
+
+/*登录按钮*/
+.btn-primary{
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    width: 300px;
+    height: 50px;
+    font-size: 18px;
+    border-radius: 10px;
+    border:none;
+    outline: none;
+    margin: 10px 0px;
+    cursor: pointer;
+}
+
+/* 主页left部分 */
+.left {
+    /* position: fixed; */
+    margin-top: 0px;
+    margin-left: 5px;
+    height: 580px;
+    width: 155px;
+    overflow: hidden;
+    border: solid 1px #c7c3c3;
+    float: left;
+    /* background-color: #c7c3c3; */
+}
+/* 左边按钮 */
+.bleft {
+    height: 100%;
+    width: 150px;
+}
+.right {
+    margin-top: 0px;
+    margin-left: 165px;
+    /* margin-left: auto; */
+    /* width: 86%; */
+    width: auto;
+    height: 580px;
+    /* float: left; */
+    border: solid 1px #c7c3c3;
+}
+/* 顶部按钮 */
+.top {
+    background-color: black;
+}
+/* 部门字体居中 */
+.text{
+    text-align: center;
+}
+/* 分页 */
+.page {
+    margin-left: 40%;
+}

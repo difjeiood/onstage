@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>选择功能页面</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./css/style.css" rel="stylesheet" />
+
+    <script src="./js/jquery-1.11.0.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    
+    <script src="./js/js.js">
+        landState(); //session状态
+    </script>
+
+</head>
+<!-- style="padding:6px 60px 6px 12px" -->
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="btn-group-vertical" role="group" aria-label="...">
+                <div class="dropdown" >
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"
+                        style="padding:6px 60px 6px 12px">
+                        <span class="glyphicon glyphicon-user"></span>   后台用户管理
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="javascript:;" data-href="login.html" class="addUser">添加用户</a></li>
+                        <li><a href="javascript:;">删除用户</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

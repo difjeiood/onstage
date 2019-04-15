@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>部门列表</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+
+    <script src="../js/jquery-1.11.0.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/js.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="text">
+                <h3>部门列表</h3>
+            </div>
+            <!-- 搜索栏 -->
+            <div class="search">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">搜索</button>
+                    </span>
+                </div>
+            </div>
+            <!-- 部门列表部分 -->
+            <div style="margin-top:10px">
+                <table class="table table-bordered table-hover showpartment">
+                    <tr>
+                        <td>
+                            <input type="checkbox" id="checkAll" />
+                        </td>
+                        <td>
+                            ID
+                        </td>
+                        <td>
+                            部门名称
+                        </td>
+                        <td>
+                            详细信息
+                        </td>
+                        <td>
+                            操作
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox"/>
+                        </td>
+                        <td>
+                            01
+                        </td>
+                        <td>
+                            技术部
+                        </td>
+                        <td>
+                            技术部
+                        </td>
+                        <td>
+                            <button class="btn btn-small glyphicon glyphicon-pencil" style="font-size:1px;" type="button">
+                            </button>
+                            <button class="btn btn-small glyphicon glyphicon-trash" style="font-size:1px;" type="button">
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- 分页操作 -->
+            <div class="page">
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>主页</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./css/style.css" rel="stylesheet" />
+
+    <script src="./js/jquery-1.11.0.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <div>
+        <nav class="navbar navbar-inverse" style="margin-bottom:5px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <a href="login.html" class="logo">高校人事管理系统</a>
+                    </div>
+                    <div class="col-md-6 col-sm-6 ">
+                        <ul class="nav navbar-nav pull-right">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                    aria-haspopup="true" aria-expanded="false">管理员登录页面<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">招聘信息</a></li>
+                                    <li><a href="#">系统公告</a></li>
+                                    <li><a href="login.html">登录页面</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- 左边 -->
+        <div class="left">
+            <div class="btn-group-vertical" role="group" aria-label="...">
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle bleft" type="button" id="dropdownMenu1"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"
+                        style="padding:6px 60px 6px 12px">
+                        <span class="glyphicon glyphicon-list-alt"></span> 部门管理
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="javascript:;" data-href="partment/partment.html" class="addUser">部门列表</a></li>
+                        <li><a href="javascript:;">添加部门</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btn-group-vertical" role="group" aria-label="...">
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle bleft" type="button" id="dropdownMenu1"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"
+                        style="padding:6px 60px 6px 12px">
+                        <span class="glyphicon glyphicon-user"></span> 教职员工管理
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="javascript:;" data-href="login.html" class="addUser">查看教职员工</a></li>
+                        <li><a href="javascript:;">注册教职员工号</a></li>
+                        <li><a href="javascript:;">修改教职员工信息</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btn-group-vertical" role="group" aria-label="...">
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle bleft" type="button" id="dropdownMenu1"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"
+                        style="padding:6px 60px 6px 12px">
+                        <span class="glyphicon glyphicon-bookmark"></span> 招聘管理
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="javascript:;" data-href="login.html" class="addUser">查看招聘信息</a></li>
+                        <li><a href="javascript:;">发布招聘信息</a></li>
+                        <li><a href="javascript:;">删除招聘信息</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btn-group-vertical" role="group" aria-label="...">
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle bleft" type="button" id="dropdownMenu1"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"
+                        style="padding:6px 60px 6px 12px">
+                        <span class="glyphicon glyphicon-eye-open"></span> 公告管理
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="javascript:;" data-href="login.html" class="addUser">查看公告</a></li>
+                        <li><a href="javascript:;">发布公告</a></li>
+                        <li><a href="javascript:;">删除公告</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btn-group-vertical" role="group" aria-label="...">
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle bleft" type="button" id="dropdownMenu1"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"
+                        style="padding:6px 60px 6px 12px">
+                        <span class="glyphicon glyphicon-tag"></span> 假期审批
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="javascript:;" data-href="login.html" class="addUser">查看并审批假期</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 右边 -->
+        <div class="container right">
+            <!-- <div class="right"> -->
+            <iframe id="frameContentRight" src="" 
+                frameborder="0" scrolling="no" onload="setIframeHeight(this)" style="width:100%;height:200%;">
+            </iframe>
+            <!-- </div> -->
+        </div>
+
+    </div>
+
+    <script src="./js/js.js"></script>
+    <script>
+        landState(); //session状态
+
+        //iframe自适应高度
+        function setIframeHeight(iframe) {
+            if (iframe) {
+                var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
+                if (iframeWin.document.body) {
+                iframe.height = iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight;
+                }
+            }
+        };
+        window.onload = function () {
+        setIframeHeight(document.getElementById('frameContentRight'));
+        };
+    </script>
+
+</body>
+
+</html>
